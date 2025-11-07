@@ -8,7 +8,23 @@ This guide provides solutions for common PHP extension and version issues on mac
 
 This means the Internationalization extension (`intl`) is not enabled in your PHP installation. Here’s how to fix it with Homebrew:
 
-### Solution: Install and Enable `intl`
+### Solution: Reinstall PHP with `intl`
+
+The error `Unable to load dynamic library 'intl'` means the extension file itself is missing. The easiest way to fix this is to reinstall PHP using Homebrew, which will correctly compile and link all necessary extensions.
+
+1.  **Reinstall PHP:**
+
+    ```bash
+    brew reinstall php
+    ```
+
+    This command will recompile PHP with all its default extensions, including `intl`.
+
+2.  **Verify the installation:**
+
+    After the reinstallation is complete, check if the `intl.so` file exists. The path should be something like `/opt/homebrew/lib/php/pecl/20240924/intl.so` (the date might differ).
+
+3.  **Ensure `intl` is enabled in `php.ini`:**
 
 1.  **Check if `intl` is installed:**
 
