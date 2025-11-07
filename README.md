@@ -2,6 +2,8 @@
 
 A modern campus engagement platform built with Laravel, Vue.js, and Tailwind CSS.
 
+**Production URL:** [https://alu.dadishimwe.com](https://alu.dadishimwe.com)
+
 ## Features
 
 ### Core Features (Fully Implemented)
@@ -29,7 +31,11 @@ A modern campus engagement platform built with Laravel, Vue.js, and Tailwind CSS
 
 ## Quick Start
 
-### Local Development
+See `docs/LOCAL_SETUP.md` for detailed local development instructions.
+
+See `docs/VPS_DEPLOYMENT.md` for complete production deployment instructions.
+
+
 
 1. **Clone and Install**
    ```bash
@@ -74,9 +80,9 @@ A modern campus engagement platform built with Laravel, Vue.js, and Tailwind CSS
 
 Visit `http://localhost:8000`
 
-### Docker Deployment
 
-See `DEPLOYMENT.md` for complete Docker deployment instructions.
+
+
 
 ## Project Structure
 
@@ -104,7 +110,7 @@ campus-connect/
 
 ## Admin Panel
 
-Access the admin panel at `/admin`
+Access the admin panel at `https://alu.dadishimwe.com/admin`
 
 Default admin credentials (after seeding):
 - Email: admin@alu.edu
@@ -114,15 +120,17 @@ Default admin credentials (after seeding):
 
 ## API Documentation
 
-API endpoints are available at `/api/*` for mobile app integration.
+API endpoints are available at `https://alu.dadishimwe.com/api/*` for mobile app integration.
 
 Authentication uses Laravel Sanctum tokens.
 
 See `API.md` for detailed endpoint documentation.
 
-## Extending Features
+## Feature Roadmap
 
-### Adding a New Feature
+See `docs/ROADMAP.md` for the planned feature implementation roadmap.
+
+
 
 1. Create migration: `php artisan make:migration create_feature_table`
 2. Create model: `php artisan make:model Feature`
@@ -132,7 +140,7 @@ See `API.md` for detailed endpoint documentation.
 
 Example migrations for marketplace, roommate finder, etc. are already included.
 
-## Contributing
+
 
 1. Create a feature branch
 2. Make your changes
@@ -143,5 +151,7 @@ Example migrations for marketplace, roommate finder, etc. are already included.
 Proprietary - African Leadership University
 
 ## Support
+
+For issues or questions, contact the ALU IT department.
 
 For issues or questions, contact the ALU IT department.
