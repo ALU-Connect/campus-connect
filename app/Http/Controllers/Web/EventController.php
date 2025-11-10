@@ -23,7 +23,7 @@ class EventController extends Controller
     {
         $query = Event::with(['creator', 'petition'])
             ->where('status', 'upcoming')
-            ->where('event_date', '>=', now());
+            ->where('start_at', '>=', now());
 
         // Filter by search
         if ($request->has('search')) {
@@ -33,7 +33,7 @@ class EventController extends Controller
             });
         }
 
-        $events = $query->orderBy('event_date', 'asc')->paginate(12);
+        $events = $query->orderBy('start_at', 'asc')->paginate(12);
 
         return Inertia::render('Events/Index', [
             'events' => $events,

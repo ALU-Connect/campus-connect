@@ -18,7 +18,7 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->name('dashboard');
 
 // Petitions
 Route::controller(PetitionController::class)->group(function () {
