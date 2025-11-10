@@ -56,20 +56,35 @@ php artisan key:generate
 
 ### Configure Database
 
-1. **Create a PostgreSQL database** for the project. You can use a GUI tool like pgAdmin or the command line:
-   ```sql
-   CREATE DATABASE campus_connect;
-   ```
+**For PostgreSQL (Recommended):**
 
-2. **Edit the `.env` file** and update the database connection details:
-   ```env
-   DB_CONNECTION=pgsql
-   DB_HOST=127.0.0.1
-   DB_PORT=5432
-   DB_DATABASE=campus_connect
-   DB_USERNAME=your_postgres_username
-   DB_PASSWORD=your_postgres_password
-   ```
+Follow the complete PostgreSQL setup guide: **[POSTGRES_SETUP_MAC.md](./POSTGRES_SETUP_MAC.md)**
+
+Quick summary:
+```bash
+# Install PostgreSQL (if not installed)
+brew install postgresql
+brew services start postgresql
+
+# Create database
+createdb campus_connect
+```
+
+Then edit the `.env` file and update the database connection details:
+```env
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=campus_connect
+DB_USERNAME=your_postgres_username
+DB_PASSWORD=your_postgres_password
+```
+
+**For SQLite (Quick Testing):**
+```bash
+touch database/database.sqlite
+# Update .env: DB_CONNECTION=sqlite
+```
 
 ## 5. Run Database Migrations
 
